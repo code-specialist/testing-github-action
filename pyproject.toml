@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "code-specialist-example-package"
-version = "1.0.0"
+version = "1.0.4"
 description = "Test package"
 authors = ["Yannic Schröer"]
 packages = [{include = "example_package"}]
