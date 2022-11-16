@@ -16,3 +16,4 @@ jobs:
           ACTIONS_ACCESS_TOKEN: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
           PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
           REGISTRY: "https://test.pypi.org/simple/"
+          BRANCH: "main"
