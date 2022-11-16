@@ -1,14 +1,17 @@
 [tool.poetry]
-name = "testing-github-action"
+name = "code-specialist-example-package"
 version = "1.0.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
-readme = "README.md"
-packages = [{include = "testing_github_action"}]
+description = "Test package"
+authors = ["Yannic Schröer"]
+packages = [{include = "example_package"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pydantic = "^1.10.2"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
 
 [build-system]
 requires = ["poetry-core"]
