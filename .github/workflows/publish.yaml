@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish PyPi package
-        uses: code-specialist/pypi-poetry-publish
+        uses: code-specialist/pypi-poetry-publish@v1
         with:
           PACKAGE_DIRECTORY: "./example-package/"
           PYTHON_VERSION: "3.10"
