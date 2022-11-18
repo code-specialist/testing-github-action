@@ -7,13 +7,15 @@ on:
 jobs:
   publish-service-client-package:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Publish PyPi package
         uses: code-specialist/pypi-poetry-publish@v1
         with:
           PACKAGE_DIRECTORY: "./example_package/"
           PYTHON_VERSION: "3.10"
-          ACTIONS_ACCESS_TOKEN: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITUHB_TOKEN }}
           PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
           REGISTRY: "https://test.pypi.org/legacy/"
           BRANCH: "main"
