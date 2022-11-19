@@ -14,6 +14,7 @@ jobs:
         uses: code-specialist/pypi-poetry-publish@v1
         with:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_DIRECTORY: "./example_package"
           PUBLISH_REGISTRY_USER: ${{ secrets.PYPI_USER }}
           PUBLISH_REGISTRY_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
           PUBLISH_REGISTRY: "https://pypi.tebuto.com"
