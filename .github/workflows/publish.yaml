@@ -10,12 +10,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Publish PyPi package
+      - name: Publish PyPI package
         uses: code-specialist/pypi-poetry-publish@v1
         with:
-          PACKAGE_DIRECTORY: "./example_package/"
-          PYTHON_VERSION: "3.10"
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-          REGISTRY: "https://test.pypi.org/legacy/"
-          BRANCH: "main"
+          PUBLISH_REGISTRY_USER: ${{ secrets.PYPI_USER }}
+          PUBLISH_REGISTRY_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+          PUBLISH_REGISTRY: "https://pypi.tebuto.com"
+          POETRY_DEPENDENCY_REGISTRY_URL: "https://pypi.tebuto.com"
+          POETRY_DEPENDENCY_REGISTRY_NAME: "tebuto"
+          POETRY_DEPENDENCY_REGISTRY_USERNAME: ${{ secrets.PYPI_USER }}
+          POETRY_DEPENDENCY_REGISTRY_PASSWORD: ${{ secrets.PYPI_PASSWORD }}

@@ -3,16 +3,17 @@ name = "code-specialist-example-package"
 version = "1.0.6"
 description = "Test package"
 authors = ["Yannic Schröer"]
-packages = [{include = "example_package"}]
+packages = [{ include = "example_package" }]
 
+
+[[tool.poetry.source]]
+name = "tebuto"
+url = "https://pypi.tebuto.com"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-pydantic = "^1.10.2"
+python = "3.11"
+tebuto-core = {version = "^3.0.0", source = "tebuto"}
 
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
 
 [build-system]
 requires = ["poetry-core"]
